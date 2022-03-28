@@ -6,7 +6,12 @@
       v-if="load"
       :indeterminate="true"
     ></v-progress-linear>
+
     <v-toolbar dark color="primary">
+      <v-btn v-if="goBack" icon dark @click="$router.go(-1)">
+        <v-icon dark left>mdi-arrow-left </v-icon>
+      </v-btn>
+
       <v-toolbar-title>{{ text }}</v-toolbar-title>
     </v-toolbar>
     <slot></slot>
@@ -15,13 +20,32 @@
 
 <script>
 export default {
-  props: ["loading", "title"],
+  props: {
+    title: {
+      type: String,
+      default: "",
+      required: true,
+    },
+    isGoingBack: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
+  },
   computed: {
     load() {
       return this.loading;
     },
     text() {
       return this.title;
+    },
+    goBack() {
+      return this.isGoingBack;
     },
   },
 };

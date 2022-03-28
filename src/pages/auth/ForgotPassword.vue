@@ -1,5 +1,5 @@
 <template>
-  <base-card title="Forgot Password?" :loading="loading">
+  <base-card title="Forgot Password?" :isGoingBack="goBack" :loading="loading">
     <v-img
       src="https://i.pinimg.com/originals/97/88/21/9788210a1ff80515c91f0679eabb0e77.jpg"
       height="400px"
@@ -46,6 +46,7 @@ export default {
       valid: true,
       email: "",
       loading: false,
+      goBack: true,
     };
   },
 };

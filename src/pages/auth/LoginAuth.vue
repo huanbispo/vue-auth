@@ -49,6 +49,7 @@ export default {
       password: "",
       confirmPassword: "",
       loading: false,
+      goBack: false,
     };
   },
   methods: {
