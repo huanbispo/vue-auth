@@ -1,27 +1,29 @@
 <template>
-  <base-card title="Verification" :loading="loading">
-    <v-img
-      src="https://i.pinimg.com/originals/97/88/21/9788210a1ff80515c91f0679eabb0e77.jpg"
-      height="400px"
-      cover
-    ></v-img>
+  <div>
+    <base-card title="Verification" :loading="loading">
+      <v-img
+        src="https://i.pinimg.com/originals/97/88/21/9788210a1ff80515c91f0679eabb0e77.jpg"
+        height="400px"
+        cover
+      ></v-img>
 
-    <v-card-text>
-      <p class="text-center">
-        Enter the verification code we just sent you on your mobile phone.
-      </p>
+      <v-card-text>
+        <p class="text-center">
+          Enter the verification code we just sent you on your mobile phone.
+        </p>
 
-      <v-text-field
-        v-model="code"
-        class="mt-3"
-        type="number"
-        label="Verification Code"
-        prepend-icon="mdi-numeric"
-        outlined
-        dense
-      ></v-text-field>
-    </v-card-text>
-  </base-card>
+        <v-text-field
+          v-model="code"
+          class="mt-3"
+          type="number"
+          label="Verification Code"
+          prepend-icon="mdi-numeric"
+          outlined
+          dense
+        ></v-text-field>
+      </v-card-text>
+    </base-card>
+  </div>
 </template>
 
 <script>
